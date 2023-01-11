@@ -1,0 +1,3 @@
+Fetch images for each game on the favourites list
+write alt text for those images
+write descriptions for each game on the favourites list
