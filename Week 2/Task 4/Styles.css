@@ -1,65 +1,162 @@
 /*Section 1*/
-#Section_1_container
-{background-color: #1F2937; margin-top: 0rem; padding-bottom: 3rem;} 
-#Section_1_container h1
-{font-size: 48px; font-weight: bolder; color: #F9FAF8;}
+#Section_1_container{
+  background-color: #1F2937;
+  margin-top: 0rem; 
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+#Section_1_container h1{
+  font-size: 48px; 
+  font-weight: bolder; 
+  color: #F9FAF8;
+}
+
 /*Note: The following style is re-used since it's listed as hero secondary text
   and header links, it also looked close to the CTA subtext so I used it for that too,
   it's located up here since it's the first occurrence of the rule(going by how i have organised them)*/
-#Section_1_container p, header a, #CTA p 
-{font-size: 18px; color: #E5E7EB;}
-#S1_img_placeholder
-{background-color: #6d747d; min-width: 5rem; min-height: 15rem;  justify-content: center; align-items: center; display: flex; }
-#S1_img_placeholder p
-{justify-content: center; align-items: center;}
+#Section_1_container p, header a, #CTA p {
+  font-size: 18px;
+  color: #E5E7EB;
+}
+
+#S1_img_placeholder{
+  display: flex; 
+  background-color: #6d747d; 
+  min-width: 25rem;
+  min-height: 15rem;
+  justify-content: center; 
+  align-items: center;
+}
+
+#S1_img_placeholder p{
+  justify-content: center; 
+  align-items: center;
+}
 
 /*Section 2*/
-#Info_header_text
-{font-size: 36px; font-weight: bolder; color: #1F2937; text-align: center;}
-figure
-{display: inline-block; max-width: 20%; text-align: center;}
-figure img
-{border-color: #3882F6; border-radius: 15%; border-style: solid; border-width: 10px; min-width: 10rem; min-height: 10rem; }
+#S2_container{
+  margin-top: 5rem;
+  margin-bottom: 5rem; 
+  padding-left: 20rem; 
+  padding-right: 20rem;
+}
+
+#Info_header_text{
+  font-size: 36px; 
+  font-weight: bolder; 
+  color: #1F2937;
+}
+
+figure{
+  display: inline-block;
+  max-width: 12.5%;
+  text-align: center;
+}
+
+figure img{
+  border-color: #3882F6;
+  border-radius: 15%;
+  border-style: solid;
+  border-width: 10px;
+  min-width: 10rem;
+  min-height: 10rem;
+}
 
 /*Section 3*/
-#Quote_section
-{background-color: #E5E7EB;}
-.Quote_text
-{font-size: 36px; font-weight: light; font-style: italic; color: #1F2937; margin-left:20%; margin-right: 20%; padding-top: 3rem;}
-#Quote_section cite
-{font-size: 18px; font-weight: bolder; padding-left: 25%; padding-bottom: 3rem;}
+#Quote_section{
+  background-color: #E5E7EB;
+  padding-bottom: 3rem;
+}
+
+.Quote_text{
+  font-size: 36px; 
+  font-weight: light;
+  font-style: italic;
+  color: #1F2937; 
+  text-align: left;
+  margin-left:27.5%;
+  margin-right: 27.5%;
+  padding-top: 5rem;
+}
+
+#Quote_section cite{
+  font-size: 18px; 
+  font-weight: bolder;
+  padding-left: 25%;
+}
 
 /*Section 4*/
-#CTA
-{margin-left: 25%; margin-right: 25%; margin-top: 3rem; margin-bottom: 3rem; background-color: #3882F6; border-radius: 5%; border-style: solid; border-color:#3882F6;}
-#CTA h3
-{font-size: 24px; font-weight: bolder; color: #E5E7EB;}
+#CTA{
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 5rem;
+  margin-bottom: 5rem; 
+  background-color: #3882F6;
+  border-radius: 5%; 
+  border-style: solid; 
+  border-color:#3882F6;
+}
 
+#CTA h3{
+  font-size: 24px; 
+  font-weight: bolder;
+  color: #E5E7EB;
+}
 
 /*Header and footer*/
-header, footer
-{background-color: #1F2937; color: #E5E7EB;}
-header
-{align-items: center; align-content: flex-end;}
-header h3
-{font-size: 24px; color: #F9FAF8; display: flex;}
+header, footer{
+  background-color: #1F2937;
+  color: #E5E7EB;
+}
+
+header{
+  align-items: center; 
+  align-content: flex-end;
+}
+
+header h3{
+  font-size: 24px;
+  color: #F9FAF8; 
+  display: flex;
+}
+
 footer
-{text-align: center; font-size: 18px; }
+{font-size: 18px;}
 
 /*Misc/other*/
 @font-face {
     font-family: 'Roboto';
     src: url(fonts/Roboto/Roboto-Black.ttf) format('truetype');
 }
-*
-{font-family: 'Roboto',sans-serif;box-sizing: border-box;}
+*{
+  font-family: 'Roboto',sans-serif;
+  box-sizing: border-box;
+}
+
 body
 {margin: 0%;}
-.flex-container
-{display: flex; justify-content: space-around; align-items: center;}
+
+.flex-container{
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
+}
+
 .flex-container h3
 {flex-grow: .7;}
-button
-{background-color: #3882F6; color: #E5E7EB; border-radius: 15%; border-color: #E5E7EB; border-style: solid; min-height: 2rem; max-height: 5rem; padding-left: 1rem; padding-right: 1rem;}
+
+button{
+  background-color: #3882F6; 
+  color: #E5E7EB; 
+  border-radius: 15%;
+  border-color: #E5E7EB;
+  border-style: solid;
+  min-height: 2rem; 
+  max-height: 5rem; 
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .Center_div
-{text-align: center;} /*TODO: check if this ended up being redundant*/
+{text-align: center;}
