@@ -50,8 +50,8 @@ figure{
   text-align: center;
 }
 figure img{
-  max-width: 12.5%;
-  max-height: 12.5%;
+  max-width: 10%;
+  max-height: 10%;
 }
 
 figure img{
@@ -115,9 +115,8 @@ header{
   align-content: flex-end;
 }
 
-header h3{
-  font-size: 24px;
-  color: #F9FAF8; 
+header img{
+  max-height: 5rem;
   display: flex;
 }
 
