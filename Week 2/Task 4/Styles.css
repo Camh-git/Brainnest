@@ -25,11 +25,7 @@
   background-color: #6d747d; 
   min-width: 25rem;
   min-height: 15rem;
-  justify-content: center; 
-  align-items: center;
-}
-
-#S1_img_placeholder p{
+  max-height: 20rem;
   justify-content: center; 
   align-items: center;
 }
@@ -52,6 +48,10 @@ figure{
   display: inline-block;
   max-width: 12.5%;
   text-align: center;
+}
+figure img{
+  max-width: 12.5%;
+  max-height: 12.5%;
 }
 
 figure img{
