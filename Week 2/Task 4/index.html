@@ -4,70 +4,71 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="Styles.css"/>
+  <link rel="stylesheet" href="styles.css"/>
   <title>Task 4</title>
 </head>
 <body>
   <header class="flex-container">
-    <img src="Images/Logo.png">
+    <img src="images/Logo.png">
     <a> Header link 1</a>
     <a> Header link 2</a>
     <a> Header link 3</a>
   </header>
 
-  <!--Section 1-->
-  <div id = "Section_1_container" class="flex-container">
-    <div style="flex-grow: 0.15;"></div>
-    <div style="flex: 0 1 30%;">
+  <!--Hero section-->
+  <div id = "hero_container" class="flex-container">
+    <div class="spacer"></div>
+    <div id="hero_text_container">
      <h1>A website with some stock images</h1>
       <p>
         We hope you like our stock image service and sign up for more
      </p>
      <button>Sign up</button>
     </div>
-    <div style="flex-grow: 0.1;"></div>
-    <div style="flex-grow: 0.4;">
-      <img src="Images/Main-img.png" id = "S1_img_placeholder">
+    <div class="spacer_small"></div> 
+    <div id = "hero_img_container">
+        <img src="images/Main-img.png" id = "hero_img">
       </div>
     </div>
-    <div style="flex-grow: 0.15;"></div>    
+    <div class="spacer"></div>    
   </div>
 
-  <!--Section 2-->
-  <div id="S2_container" class="Center_div">
-    <h2 id = "Info_header_text" class="Center_div">Some example images</h2>
-    <div class="flex-container">
-      <figure>
-        <img src ="Images/Country_road.png" alt="">
+  <!--Gallery-->
+  <div id="gallery_container" class="Center_div">
+    <h2 id = "gallery_header_text" class="Center_div">Some example images</h2>
+    <div id="gallery_img_container" class="flex-container">
+      <div class="gallery_item">
+        <img src ="images/Country_road.png" alt="">
         <p>A country road on a bright but cloudy day</p>
-     </figure>
+      </div>
 
-     <figure>
-       <img src ="Images/Forrest.png" alt="">
+      <div class="gallery_item">
+        <img src ="images/Forrest.png" alt="">
         <p>A heavy forrest</p>
-      </figure>
-     <figure>
-       <img src ="Images/Lightning.png" alt="">
-       <p>A lightning strike at night</p>
-      </figure>
+      </div>
+      
+      <div class="gallery_item">
+        <img src ="images/Lightning.png" alt="">
+        <p>A lightning strike at night</p>
+      </div>
 
-     <figure>
-        <img src ="Images/Sky.png" alt="">
+      <div class="gallery_item">
+        <img src ="images/Sky.png" alt="">
         <p>The sun shining through some clouds</p>
-      </figure> 
+      </div> 
     </div>   
   </div>
 
-  <!--Section 3-->
-  <div id = "Quote_section" class="Center_div">
-    <blockquote class ="Quote_text">
+  <!--Quote section-->
+  <div id = "quote_section" class="Center_div">
+    <blockquote class ="quote_text">
       "All things are difficult before they are easy"
     </blockquote>
     <cite>-Thomas Fuller</cite>
     <!--Yes, I did google "famous quotes"-->
   </div>
 
-  <!--Section 4-->
+  <!--Call to action-->
   <div id = "CTA" class="flex-container">
     <div>
       <h3>Sign up for more!</h3>

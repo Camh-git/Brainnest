@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions and Answers</title>
+</head>
+<body>
+  <h3>1.Name the three ways to declare a variable?</h3>
+  <p>Answer: Var, let and const.</p>
+
+  <h3>2.Which of the three variable declarations should you avoid and why?</h3>
+  <p>Answer: Var, since it is global scope.</p>
+
+  <h3>3.What rules should you follow when naming variables?</h3>
+  <p>
+    Answer: They should be specific, descriptive, concise, lower case and use
+    camel case, containing only letters, numbers and the symbols $ and _, 
+    preferably in English.
+  </p>
+
+  <h3>
+    4.What should you look out for when using the + operator with numbers
+    and strings?
+  </h3>
+  <p>Answer: Unexpected results/behavour due to type mixing, eg 10 + “8”=108</p>
+
+  <h3>5.How does the % operator work?</h3>
+  <p>Answer: It calculates the remainder from an operation eg:  5%2 = 1</p>
+
+  <h3>6.Explain the difference between == and ===.</h3>
+  <p>
+    Answer: == checks if 2 variables have the same value, === checks if they
+    have the same value and type. This lets us differentiate between, for 
+    example 0 and false.
+  </p>
+
+  <h3>7.When would you receive a NaN result?</h3>
+  <p>Answer: You tried to do math involving an undefined variable.</p>
+
+  <h3>8.How do you increment and decrement a number?</h3>
+  <p>Answer: Increment: x++ , decrement: x—</p>
+
+  <h3>
+    9.Explain the difference between prefixing and post-fixing 
+    increment/decrement operators.
+  </h3>
+  <p>
+    Answer: Prefixing does the maths, then returns the result, postfixing returns
+    the value, then does the maths, which makes it use slightly more memory to
+    store a temporary variable with the value.
+  </p>
+
+  <h3>10.What is operator precedence and how is it handled in JS?</h3>
+  <p>
+    Answer:Precedence describes the order in which operations are carried out in
+    a statement that contains more than one of them. Precedence is determined 
+    by the precedence table, with higher entries having higher precedence.
+  </p>
+
+  <h3>11.How do you log information to the console?</h3>
+  <p>Answer: Console.log(message)</p>
+
+  <h3>12.What does unary plus operator do to string representations of integers?</h3>
+  <p>
+    Answer: It lets us convert its operand to a number, eg: const x = 5; 
+    lety= +x;Results in a number.
+  </p>
+
+  <h3>13.What are the eight data types in JavaScript?</h3>
+  <p>Answer: String, number, bigint, Boolean, null, undefined, symbol, object</p>
+
+  <h3>14.Which data type is NOT primitive?</h3>
+  <p>Answer: Objects</p>
+
+  <h3>15.What is the relationship between null and undefined?</h3>
+  <p>Answer: Null is something that doesnt exist, undefined exists but has no value</p>
+
+  <h3>16.What is the difference between single, double, and backtick quotes for strings?</h3>
+  <p>
+    Answer: Backticks let us embed variables in our strings using ${}, the other
+    2 dont and are mostly the same, except for use inside strings and json
+  </p>
+
+  <h3>17.What is the term for embedding variables/expressions in a string?</h3>
+  <p>Answer: Concatenation</p>
+
+  <h3>18.Which type of quote lets you embed variables/expressions in a string?</h3>
+  <p>Answer: Ones in backticks.</p>
+
+  <h3>19.How do you embed variables/expressions in a string?</h3>
+  <p>
+    Answer: IN `` we use ${}, in “” or ‘’ we have to close the string use +, add
+    the var, another + and then “ to continue.
+  </p>
+
+  <h3>20.How do you escape characters in a string?</h3>
+  <p>Answer: Using a backslash before the special char</p>
+
+  <h3>21.What is the difference between the slice/substring/substr string methods?</h3>
+  <p>
+    Answer: How they behave, eg: substr will swap the params if the endpoint appears
+    before the start, while slice will return empty, NaN is treated as 0 in substr, 
+    in slice if start is negative it will be placed at the end of the string.
+  </p>
+
+  <h3>22.What are the three logical operators and what do they stand for?</h3>
+  <p>Answer: && and, || or, ! not</p>
+
+  <h3>23.What are the comparison operators?</h3>
+  <p>Answer: == and ===</p>
+
+  <h3>24.What are truthy and falsy values?</h3>
+  <p>Answer: Values that evaluate as true or false, eg: 1=true, 0=false.</p>
+
+  <h3>25.What are the falsy values in JavaScript?</h3>
+  <p>Answer: False, 0, empty strings, null, undefined, NaN</p>
+
+  <h3>26.What are conditionals?</h3>
+  <p>Answer: Statements that perform certain actions if a condition is met.</p>
+
+  <h3>27.What is the syntax for an if/else conditional?</h3>
+  <p>Answer: If(condition){action}else{action}</p>
+
+  <h3>28.What is the syntax for a switch statement?</h3>
+  <p>Answer: Switch(value){case x:action;break; default:action;break;}</p>
+
+  <h3>29.What is the syntax for a ternary operator?</h3>
+  <p>
+    Answer: ?, it is used as a shorthand for using an if statement to assign
+    values, it takes the format:  condition? Value if true : value if false
+  </p>
+
+  <h3>30.What is nesting?</h3>
+  <p>
+    Answer: Nesting is when a statement contains another instance of the same 
+    kind of statement, eg nested if statements.
+  </p>
+
+  <h3>31.What are functions useful for?</h3>
+  <p>
+    Answer: For allowing us to call sections of code, especially if we want to
+    re-use it, eg: We could have function ComplicatedSum(number); and use it 
+    to perform said sum on 3 different numbers instead of writing the whole 
+    thing out 3 times.
+  </p>
+
+  <h3>32.How do you invoke a function?</h3>
+  <p>Answer: It’s name followed by (), eg:  SayHello();</p>
+
+  <h3>33.What are anonymous functions?</h3>
+  <p>
+    Answer: Functions without names, useful for when you want a var to have
+    a function.
+  </p>
+
+  <h3>34.What is function scope?</h3>
+  <p>Answer: The portion of your code in which a function is visible/useable.</p>
+
+  <h3>35.What are return values?</h3>
+  <p>Answer: The values we assign for a  function to output when it is complete.</p>
+
+  <h3>36.What are arrow functions?</h3>
+  <p>Answer: A way of writing shorter syntax for our anonymous functions.</p> 
+</body>
+</html>

@@ -1,12 +1,12 @@
 /*Section 1*/
-#Section_1_container{
+#hero_container{
   background-color: #1F2937;
   margin-top: 0rem; 
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
 
-#Section_1_container h1{
+#hero_container h1{
   font-size: 48px; 
   font-weight: bolder; 
   color: #F9FAF8;
@@ -15,12 +15,17 @@
 /*Note: The following style is re-used since it's listed as hero secondary text
   and header links, it also looked close to the CTA subtext so I used it for that too,
   it's located up here since it's the first occurrence of the rule(going by how i have organised them)*/
-#Section_1_container p, header a, #CTA p {
+#hero_container p, header a, #CTA p {
   font-size: 18px;
   color: #E5E7EB;
 }
+#hero_text_container
+{flex: 0 1 30%;}
 
-#S1_img_placeholder{
+#hero_img_container
+{flex-grow: 0.4;}
+
+#hero_img{
   display: flex; 
   background-color: #6d747d; 
   min-width: 25rem;
@@ -28,59 +33,68 @@
   max-height: 20rem;
   justify-content: center; 
   align-items: center;
+  flex-grow: 0.5;
 }
+.spacer
+{flex-grow: 0.15;}
+.spacer_small
+{flex-grow: 0.1;}
 
 /*Section 2*/
-#S2_container{
+#gallery_container{
   margin-top: 5rem;
   margin-bottom: 5rem; 
   padding-left: 20rem; 
   padding-right: 20rem;
 }
 
-#Info_header_text{
+#gallery_header_text{
   font-size: 36px; 
   font-weight: bolder; 
   color: #1F2937;
 }
+#gallery_img_container{
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+#gallery_img_container p
+{text-align: center;}
 
-figure{
-  display: inline-block;
+.gallery_item{
+  display: flex;
+  flex-wrap: wrap;
   max-width: 12.5%;
-  text-align: center;
-}
-figure img{
-  max-width: 10%;
-  max-height: 10%;
+  align-items: center;
+  justify-content: center;
 }
 
-figure img{
+.gallery_item img{
   border-color: #3882F6;
   border-radius: 15%;
   border-style: solid;
   border-width: 10px;
   min-width: 10rem;
   min-height: 10rem;
+  max-width: 10%;
+  max-height: 10%;
 }
 
 /*Section 3*/
-#Quote_section{
+#quote_section{
   background-color: #E5E7EB;
   padding-bottom: 3rem;
 }
 
-.Quote_text{
+.quote_text{
   font-size: 36px; 
   font-weight: light;
   font-style: italic;
   color: #1F2937; 
-  text-align: left;
-  margin-left:27.5%;
-  margin-right: 27.5%;
+  text-align: center;
   padding-top: 5rem;
 }
 
-#Quote_section cite{
+#quote_section cite{
   font-size: 18px; 
   font-weight: bolder;
   padding-left: 25%;
@@ -140,6 +154,7 @@ body
   display: flex;
   justify-content: space-around; 
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .flex-container h3
