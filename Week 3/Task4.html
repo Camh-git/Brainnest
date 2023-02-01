@@ -42,7 +42,7 @@
         case "ROCK":
           switch(computerSelection){
             case "Rock": 
-              return("Draw");
+              return("draw");
             case "Paper":
               return("computerWin");
             case "scissors":
@@ -55,7 +55,7 @@
             case "Rock": 
               return("playerWin");
             case "Paper":
-              return("Draw");
+              return("draw");
             case "scissors":
               return("computerWin");
           }
@@ -68,9 +68,12 @@
             case "Paper":
               return("playerWin");
             case "scissors":
-              return("Draw");
+              return("draw");
           }
           break;
+
+        case "":
+          return("none");
 
         default:
           console.log(`ERROR: player selection was: ${playerSelection}`)
@@ -81,6 +84,11 @@
     function game(){
       let playerScore = 0;
       let computerScore = 0;
+      
+      let Format = (string) =>{
+        string=string.toLowerCase();
+        return string.charAt(0).toUpperCase()+string.slice(1);
+      }
 
       for(let i =0; i<5; i++){
         //Getting and comparing the player and the computer choices
@@ -88,20 +96,30 @@
         let computerSelection = computerPlay();
         let result = playRound(playerSelection,computerSelection)
 
-        //Scoring
-        if(result == "playerWin"){
-          console.log(`Round ${(i+1)}: You win! ${playerSelection.toLowerCase()} beats ${computerSelection}`);
-          playerScore++;
-        }
-        else if (result == "computerWin"){
-          console.log(`Round ${(i+1)}: You lose! ${computerSelection} beats ${playerSelection.toLowerCase()}`);
-          computerScore++;
-        } 
-        else if (result == "Draw"){
-          console.log(`Round ${(i+1)}: Draw, you both chose ${computerSelection}`);
-        }
-        else{
-          console.log(`ERROR: round ${(i+1)}, result: ${result}`);
+        //Scoring     
+        switch(result){
+          case "playerWin":
+            console.log(`Round ${(i+1)}: You win! ${Format(playerSelection)} beats ${computerSelection}`);
+            playerScore++;
+            break;
+          
+          case "computerWin":
+            console.log(`Round ${(i+1)}: You lose! ${computerSelection} beats ${Format(playerSelection)}`);
+            computerScore++;
+            break;
+
+          case "draw":
+            console.log(`Round ${(i+1)}: Draw, you both chose ${computerSelection}`);
+            break;
+          
+          case "none":
+            console.log(`Round ${(i+1)}: No player input, computer wins.`);
+            computerScore++;
+            break;
+
+          default:
+            console.log(`ERROR: Round ${(i+1)}, result: ${result}`);
+            break;
         }
       }
 
@@ -110,7 +128,7 @@
         console.log(`Congratulations, you win! The final score was: ${playerScore} to ${computerScore}`);
       } 
       else if (playerScore < computerScore){
-        console.log(`unfortunately you lost. The final score was: ${playerScore} to ${computerScore}`);
+        console.log(`Unfortunately you lost. The final score was: ${playerScore} to ${computerScore}`);
 
       } else{
         if(playerScore = 1){
