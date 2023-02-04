@@ -12,74 +12,26 @@
     
   <script>
     function computerPlay(){
-      //TODO: implement the choose from and array option that we saw
-      let choice = Math.floor(Math.random()*3+1); //Random * (max-min+1)+min
-      switch(choice){
-        case 1:
-          choice = "Rock";
-          break;
-        case 2:
-          choice = "Paper";
-          break;
-        case 3:
-          choice = "scissors";
-          break;
-        default:
-          choice = "Invalid";
-      }
-      return(choice);
+      let options = ["Rock","Paper","Scissors"];
+      let choice = Math.floor(Math.random()*3); //Random * (max-min+1)+min
+      return(options[choice]);
     }
     
     function playRound(playerSelection,computerSelection){
-      playerSelection = playerSelection.toUpperCase();
-
-      //Declaring the helper functions here for the sake of tidyness
-      /*let PlayerWin = (playerSelection,computerSelection) =>{
-        console.log(`You win! ${playerChoice.toLowerCase()} beats ${compChoice}`)
-        return("playerWin")
-      }*/
-      //TODO: implement the more efficient scoring we saw
-      switch(playerSelection)
-      {
-        case "ROCK":
-          switch(computerSelection){
-            case "Rock": 
-              return("draw");
-            case "Paper":
-              return("computerWin");
-            case "scissors":
-              return("playerWin");
-          }
-          break;
-
-        case "PAPER":
-          switch(computerSelection){
-            case "Rock": 
-              return("playerWin");
-            case "Paper":
-              return("draw");
-            case "scissors":
-              return("computerWin");
-          }
-          break;
-
-        case "SCISSORS":
-          switch(computerSelection){
-            case "Rock": 
-              return("computerWin");
-            case "Paper":
-              return("playerWin");
-            case "scissors":
-              return("draw");
-          }
-          break;
-
-        case "":
-          return("none");
-
-        default:
-          console.log(`ERROR: player selection was: ${playerSelection}`)
-          return("Unknown");
+      console.log(playerSelection + " vs "+computerSelection); //TODO:delete  this debug
+      if(
+        (playerSelection === "ROCK" && computerSelection === "Scissors") ||
+        (playerSelection === "PAPER" && computerSelection === "Rock") ||
+        (playerSelection === "SCISSORS" && computerSelection ==="Paper")
+      ) {
+        return("playerWin");
+      }
+      else if (playerSelection == computerSelection.toUpperCase()){
+        return("draw");
+      } else if (playerSelection ==""){
+        return("none");
+      } else {
+        return("computerWin");
       }
     }
 
@@ -94,9 +46,13 @@
 
       for(let i =0; i<5; i++){
         //Getting and comparing the player and the computer choices
-        //TODO: implement a do while loop to make sure the input is good.
-        let playerSelection = window.prompt("Please enter rock, paper or scissors"); //Replace the prompt with "Rock" to autoplay for debug purposes
-        let computerSelection = computerPlay();
+        let playerSelection = "none";
+        do{
+          playerSelection = window.prompt("Please enter rock, paper or scissors").toUpperCase(); //Replace the prompt with "Rock" to autoplay for debug purposes
+        }
+        while(playerSelection !=="ROCK" && playerSelection !=="PAPER" && playerSelection !=="SCISSORS");
+
+        let computerSelection = computerPlay();  
         let result = playRound(playerSelection,computerSelection)
 
         //Scoring     
