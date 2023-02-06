@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questions and Answers</title>
+</head>
+<body>
+  <h3>1.Why are event listeners the preferred way to handle events?</h3>
+  <p>
+    Answer: So that it is easy to read and understand, this is very important
+    for working with code other people wrote, or that you wrote a while ago.
+  </p>
+
+  <h3>2.What is the difference between good comments and bad comments?</h3>
+  <p>Answer: Good comments are short and descriptive</p>
+  
+  <h3>3.What is an array?</h3>
+  <p>Answer: An array is an object that can hold more than one value.</p>
+  
+  <h3>4.What are arrays useful for?</h3>
+  <p>Answer: They let us create lists of items that we can then iterate through</p>
+  
+  <h3>5.How do you access an array element?</h3>
+  <p>
+    Answer: Using it’s index(starting at 0), eg: 1st item is [0], 2nd is [1] 
+    and so on. 
+  </p>
+  
+  <h3>6.How do you change an array element?</h3>
+  <p>Answer: By assigning a value to it’s index eg: cars[1] = “volvo”</p>
+  
+  <h3>7.What are some useful array properties?</h3>
+  <p>Answer: Length(), useful for for loops</p>
+  
+  <h3>8.What are some useful array methods?</h3>
+  <p>
+    Answer: .join() to combine, .indexOf() to find things, push(),pop() and 
+    splice() to modify items.
+  </p>
+  
+  <h3>9.What are loops useful for?</h3>
+  <p>
+    Answer: Iterating through arrays, doing repetitive tasks, doing something
+    until a condition is met.
+  </p>
+  
+  <h3>10.What is the break statement?</h3>
+  <p>
+    Answer: A statement that lets you jump out of a loop or switch when you
+    want to.
+  </p>
+  
+  <h3>11.What is the continue statement?</h3>
+  <p>
+    Answer: A statement that lets you skip through the current iteration
+    of a loop and onto the next one.
+  </p>
+  
+  <h3>12.What is the DOM?</h3>
+  <p>
+    Answer: The document object model, it is the structure of elements that 
+    makes up our html pages. 
+  </p>
+  
+  <h3>13.How do you target the nodes you want to work with?</h3>
+  <p>
+    Answer: Use one of the selector methods, eg: document.querySelector(),
+    document.querySelectorAll(), document.getElementByID(). 
+  </p>
+  
+  <h3>14.How do you create an element in the DOM?</h3>
+  <p>Answer: Document.createElement(tagname)</p>
+  
+  <h3>15.How do you add an element to the DOM?</h3>
+  <p>Answer: Use the method .appendChild() on the parent element</p>
+  
+  <h3>16.How do you remove an element from the DOM?</h3>
+  <p>Answer: Use the method removeChild() on the parent element</p>
+  
+  <h3>17.How can you alter an element in the DOM?</h3>
+  <p>
+    Answer: Get the element using one of the selector methods from earlier,
+    then use .setAttribute(“attribute”,”value”) on it.
+  </p>
+  
+  <h3>18.When adding text to a DOM element, should you use textContent or innerHTML?</h3>
+  <p>Answer: TextContent, since innerHTML might remove existing html structure.</p>
+  
+  <h3>19.Where should you include your JavaScript tag in your HTML file when working with DOM nodes?</h3>
+  <p>Answer: At the bottom of the body tag.</p>
+  
+  <h3>20.How do “events” and “listeners” work?</h3>
+  <p>
+    Answer: An event is any action the user performs, of which there are many
+    (the most common is probably click).
+    <br>
+    listeners are attached to elements and wait for one of the aforementioned
+    actions to occur to it, they then fire and execute their code.
+  </p>
+  
+  <h3>21.What are three ways to use events in your code?</h3>
+  <p>
+    Answer: To react to clicks, a change in an element, or when the mouse hovers
+    over an element.
+  </p>
+  
+  <h3>22.Why are event listeners the preferred way to handle events?</h3>
+  <p>
+    Answer: Because they let us set up   actions for each specific kind of event,
+     for example a button could have a click action, a hover action and an onload
+     (eg enable) action. 
+  </p>
+
+  <h3>23.What are the benefits of using named functions in your listeners?</h3>
+  <p>Answer: They can be called from outside the listener</p>
+
+  <h3>24.How do you attach listeners to groups of nodes?</h3>
+  <p>
+    Answer: Create your group using whatever select methods are appropriate,
+    then in a for loopadd an event listener to the object at each index, it 
+    should look something like: 
+    (see word document version: <a href = "JS Terminology Part 2 - Answered.docx">here</a>)
+  </p>
+
+  <h3>25.What is the difference between the return values of querySelector and querySelectorAll?</h3>
+  <p>Answer: queryselector returns the node, querySelectorAll returns a node list.</p>
+
+  <h3>26.What does a “nodelist” contain?</h3>
+  <p>Answer: A collection of nodes, some properties like length.</p>
+
+  <h3>27.Explain the difference between “capture” and “bubbling”.</h3>
+  <p>
+    Answer: Capture is the process of the event heading down to find the target
+    element, bubbling is the effects of the event propagating up from the element 
+    through to the window.
+  </p>
+
+  <h3>28.What is the difference between objects and arrays?</h3>
+  <p>
+    Answer: Objects are a wide variety of complex data objects, an array is a 
+    specific kind of object that holds a list of items.
+  </p>
+
+  <h3>29.How do you access object properties?</h3>
+  <p>Answer: Either Object.property or object[“property”]</p>
+</body>
+</html>

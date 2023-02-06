@@ -18,7 +18,6 @@
     }
     
     function playRound(playerSelection,computerSelection){
-      console.log(playerSelection + " vs "+computerSelection); //TODO:delete  this debug
       if(
         (playerSelection === "ROCK" && computerSelection === "Scissors") ||
         (playerSelection === "PAPER" && computerSelection === "Rock") ||
@@ -58,22 +57,23 @@
         //Scoring     
         switch(result){
           case "playerWin":
-            console.log(`Round ${(i+1)}: You win! ${Format(playerSelection)} beats ${computerSelection}`);
             playerScore++;
+            console.log(`Round ${(i+1)}: You win! ${Format(playerSelection)} beats ${computerSelection}. Score:${playerScore},${computerScore}.`);
             break;
           
           case "computerWin":
-            console.log(`Round ${(i+1)}: You lose! ${computerSelection} beats ${Format(playerSelection)}`);
             computerScore++;
+            console.log(`Round ${(i+1)}: You lose! ${computerSelection} beats ${Format(playerSelection)}. Score:${playerScore},${computerScore}.`);
+            
             break;
 
           case "draw":
-            console.log(`Round ${(i+1)}: Draw, you both chose ${computerSelection}`);
+            console.log(`Round ${(i+1)}: Draw, you both chose ${computerSelection}. Score:${playerScore},${computerScore}.`);
             break;
           
           case "none":
-            console.log(`Round ${(i+1)}: No player input, computer wins.`);
             computerScore++;
+            console.log(`Round ${(i+1)}: No player input, computer wins. Score:${playerScore},${computerScore}.`);
             break;
 
           default:
@@ -90,7 +90,7 @@
         console.log(`Unfortunately you lost. The final score was: ${playerScore} to ${computerScore}`);
 
       } else {
-        if(playerScore = 1){
+        if(playerScore == 1){
           console.log(`The game was a draw, you both scored 1 point`);
         } else {
           console.log(`The game was a draw, you both scored ${playerScore} points`);

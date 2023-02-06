@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Rock, paper scissors</title>
+</head>
+<body>
+  <h1>Rock, paper scissors</h1>
+  <h3>Pick one of the options to play</h3>
+  <div id="Controls">
+    <button>Rock</button>
+    <button>Paper</button>
+    <button>Scissors</button>
+  <!-- onclick="playRound(`Scissors`)"-->
+  </div>
+
+  <div id = "Displays">
+    <h3>Your score:</h3>
+    <h3 id = "Player_score_display">0</h3>
+    <h3>Computer's score:</h3>
+    <h3 id = "Computer_score_display">0</h3>
+    <h3 id = "Result_display"></h3>
+    <h1 id = "Winner_display"></h1>
+  </div>
+
+  <button id = "Reset_btn", onClick="window.location.reload()">Reset</button>
+
+  <script src ="rock_paper_scissors.js"></script>
+</body>
+</html>

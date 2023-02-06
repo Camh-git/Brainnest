@@ -1,0 +1,38 @@
+h1,h2,h3,h4,h5,p
+{color:white;}
+
+html{
+    background-color: #1F2937;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 1rem;
+    color: #E5E7EB;
+    background-color: #3882F6;
+    border: 5px solid #E5E7EB;
+    border-radius: 10%;
+}
+
+#Controls{
+    display: flex;
+    justify-content: center;
+}
+
+#Displays{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}

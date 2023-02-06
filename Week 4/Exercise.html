@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>script content goes under here</h1>
+  <div id = "Container"></div>
+  <script>
+    let container = document.getElementById('Container');
+    //1.
+    let redPara = document.createElement('p');
+    redPara.innerText ="Hey, I'm red!"
+    redPara.setAttribute('style','color:red');
+    container.appendChild(redPara);
+    //2.
+    let blueHeading = document.createElement('h3');
+    blueHeading.innerText ="I'm a blue h3";    
+    blueHeading.setAttribute('style','color:blue');
+    container.appendChild(blueHeading);
+    //3.
+    let borderBox = document.createElement('div');
+    borderBox.setAttribute('style','background-color: pink; border-color:black; border-style:solid; border-width:5px');
+    
+    let boxHeader = document.createElement('h1');
+    boxHeader.innerText = `I'm in a div`;
+    borderBox.appendChild(boxHeader);
+    
+    let boxp = document.createElement('p');
+    boxp.innerText= ` ME TOO!`;
+    borderBox.appendChild(boxp);
+    
+    container.appendChild(borderBox);
+    </script>
+    
+</body>
+</html>
