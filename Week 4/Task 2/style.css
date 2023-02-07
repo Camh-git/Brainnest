@@ -1,9 +1,8 @@
 h1,h2,h3,h4,h5,p
 {color:white;}
 
-html{
-    background-color: #1F2937;
-}
+html
+{background-color: #1F2937;}
 
 body{
     margin: 0;
@@ -21,6 +20,10 @@ button{
     background-color: #3882F6;
     border: 5px solid #E5E7EB;
     border-radius: 10%;
+}
+button :hover{
+    background-color: #38e0f6;
+    transition: 0.5s;
 }
 
 #Controls{

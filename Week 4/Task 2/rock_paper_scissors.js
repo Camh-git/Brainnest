@@ -10,7 +10,7 @@ let computerScore = 0;
 function setup(){
   for (i = 0; i <Controls.length; i++){
     Controls[i].addEventListener('click',function(e){
-      playRound(e.target.textContent);
+      playRound(e.target.value);
     });
   }
 }
