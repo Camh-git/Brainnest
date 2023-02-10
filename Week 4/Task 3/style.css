@@ -1,0 +1,24 @@
+html
+{background-color: #1F2937;}
+
+h1,h2,h3,h4,h5,p
+{color:white;}
+
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+button{
+    padding: 1rem;
+    margin: 1rem;
+    font-weight: bolder;    
+}
+#Num_pad{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 30rem;
+    margin-right: 30rem;
+}
