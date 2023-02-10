@@ -1,7 +1,6 @@
 const Display = document.getElementById("display");
 const Numb_pad = document.querySelectorAll("#Num_pad button");
 const Operators = document.querySelectorAll("#Operations button");
-const Warning = document.getElementById("warning");
 let run_btn = document.getElementById("equals_btn");
 
 let history = [];
@@ -93,7 +92,7 @@ function setup(){
   let clear_btn = document.getElementById("clear_btn");
   clear_btn.addEventListener('click',function(e){
     //This is on the assumption that you didn't want this to just reload the page
-    Display.textContent = Warning.textContent = operator = "";
+    Display.textContent = operator = "";
     current_value = last_result = history.length = 0;
     new_float = false;
   });

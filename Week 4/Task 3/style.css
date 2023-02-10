@@ -14,11 +14,20 @@ body{
 button{
     padding: 1rem;
     margin: 1rem;
-    font-weight: bolder;    
+    font-weight: bolder;
+    border: 5px solid #8b94b1;
+    border-radius: 10%; 
 }
 #Num_pad{
     display: flex;
     flex-wrap: wrap;
     margin-left: 30rem;
     margin-right: 30rem;
+}
+#display{
+    width: 20rem;
+    background-color: black;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
