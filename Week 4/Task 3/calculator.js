@@ -57,7 +57,7 @@ function setup(){
       if(last_result = 0){
         Display.textContent = last_result + " " + operator;
       } else {
-        Display.textContent + operator;
+        Display.textContent = Display.textContent + " " + operator;
       }
 
       //This check stops the calculator from using a value that was just reset to 0 by a previous operation
