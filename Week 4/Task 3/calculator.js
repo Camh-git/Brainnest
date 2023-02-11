@@ -9,7 +9,6 @@ let operator = "";
 let last_result = 0;
 let new_float = false;
 
-
 function debug_show_history(){
   let response = "History:";
   for (i=0; i<history.length;i++){
@@ -154,6 +153,11 @@ function setup(){
         e.preventDefault();
         let Equals = document.getElementById("Equals_btn");
         Equals.click();
+        break;
+      case ".":
+        e.preventDefault();
+        let float_btn = document.getElementById("float_btn");
+        float_btn.click();
         break;
     }
   });
