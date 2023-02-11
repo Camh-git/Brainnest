@@ -21,8 +21,8 @@ button{
 #Num_pad{
     display: flex;
     flex-wrap: wrap;
-    margin-left: 30rem;
-    margin-right: 30rem;
+    justify-content: center;
+    width: 20rem;
 }
 #display{
     width: 20rem;
