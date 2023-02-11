@@ -9,26 +9,20 @@ let operator = "";
 let lastResult = 0;
 let newFloat = false;
 
-function debug_show_history(){
-  let response = "History:";
-  for (i=0; i<history.length;i++){
-    response+= history[i];
-  }
-  return(response);
-}
-
 function setup(){
   //Setup the number inputs
   for (i = 0; i <numbPad.length; i++){
     numbPad[i].addEventListener('click',function(e){
       if(currentValue == 0){
-        currentValue = e.target.value;
+        if(newFloat){
+           setup_new_float(e);
+        } else {
+          currentValue = e.target.value;
+        }
       } else {
         //check if user just added a decimal point, and overwrite the trailing 0 if so
         if(newFloat){
-          currentValue += e.target.value;
-          currentValue = currentValue.slice(0,-2) + currentValue.slice(-1);
-          newFloat = false;
+          setup_new_float(e);
         } else {
           currentValue += e.target.value;
         }
@@ -164,6 +158,20 @@ function setup(){
         break;
     }
   });
+}
+
+function setup_new_float(e){
+  currentValue += e.target.value;
+  currentValue = currentValue.slice(0,-2) + currentValue.slice(-1);
+  newFloat = false;
+}
+
+function debug_show_history(){
+  let response = "History:";
+  for (i=0; i<history.length;i++){
+    response+= history[i];
+  }
+  return(response);
 }
 
 function add (value1, value2){
