@@ -18,11 +18,15 @@ button{
     border: 5px solid #8b94b1;
     border-radius: 10%; 
 }
+#Operations{
+    display: flex;
+    flex-direction: row;
+}
 #Num_pad{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 20rem;
+    width: 25rem;
 }
 #display{
     width: 20rem;

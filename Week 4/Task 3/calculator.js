@@ -1,13 +1,13 @@
-const Display = document.getElementById("display");
-const Numb_pad = document.querySelectorAll("#Num_pad button");
-const Operators = document.querySelectorAll("#Operations button");
-let run_btn = document.getElementById("equals_btn");
+const display = document.getElementById("display");
+const numbPad = document.querySelectorAll("#Num_pad button");
+const operators = document.querySelectorAll("#Operations button");
+const runBtn = document.getElementById("equals_btn");
 
 let history = [];
-let current_value = 0;
+let currentValue = 0;
 let operator = "";
-let last_result = 0;
-let new_float = false;
+let lastResult = 0;
+let newFloat = false;
 
 function debug_show_history(){
   let response = "History:";
@@ -19,27 +19,27 @@ function debug_show_history(){
 
 function setup(){
   //Setup the number inputs
-  for (i = 0; i <Numb_pad.length; i++){
-    Numb_pad[i].addEventListener('click',function(e){
-      if(current_value == 0){
-        current_value = e.target.value;
+  for (i = 0; i <numbPad.length; i++){
+    numbPad[i].addEventListener('click',function(e){
+      if(currentValue == 0){
+        currentValue = e.target.value;
       } else {
         //check if user just added a decimal point, and overwrite the trailing 0 if so
-        if(new_float){
-          current_value += e.target.value;
-          current_value = current_value.slice(0,-2) + current_value.slice(-1);
-          new_float = false;
+        if(newFloat){
+          currentValue += e.target.value;
+          currentValue = currentValue.slice(0,-2) + currentValue.slice(-1);
+          newFloat = false;
         } else {
-          current_value += e.target.value;
+          currentValue += e.target.value;
         }
       }
-      Display.textContent = current_value;
+      display.textContent = currentValue;
     });
   }
   //Setup the operator inputs
-  for (i = 0; i <Operators.length; i++){
-    Operators[i].addEventListener('click',function(e){
-      run_btn.click();
+  for (i = 0; i <operators.length; i++){
+    operators[i].addEventListener('click',function(e){
+      runBtn.click();
       switch(e.target.value){
         case "Add":
           operator = "+";
@@ -54,19 +54,20 @@ function setup(){
           operator = "/";
           break;
         }
-      if(last_result = 0){
-        Display.textContent = last_result + " " + operator;
+      if(lastResult = 0){
+        display.textContent = lastResult + " " + operator;
       } else {
-        Display.textContent + operator;
+        display.textContent = display.textContent + " " + operator;
       }
 
       //This check stops the calculator from using a value that was just reset to 0 by a previous operation
-      if(current_value == 0){
+      if(currentValue == 0){
         console.log("Operator event handler: no current value, skipping operation, ignore if just after result");
         return;
       }
-      history.push(current_value);
-      current_value = 0;
+
+      history.push(currentValue);
+      currentValue = 0;
 
       if(history.length > 1){
         operate(history[history.length-2],history[history.length-1]);
@@ -76,9 +77,9 @@ function setup(){
     });
   }
   //Setup the equals button
-  run_btn.addEventListener('click',function(e){
-    history.push(current_value);
-    current_value = 0;
+  runBtn.addEventListener('click',function(e){
+    history.push(currentValue);
+    currentValue = 0;
 
     if(history.length <= 1 || operator == ""){
       console.log("Please fill out the equation before running.");
@@ -91,24 +92,25 @@ function setup(){
   let clear_btn = document.getElementById("clear_btn");
   clear_btn.addEventListener('click',function(e){
     //This is on the assumption that you didn't want this to just reload the page
-    Display.textContent = operator = "";
-    current_value = last_result = history.length = 0;
-    new_float = false;
+    operator = "";
+    display.textContent = 0;
+    currentValue = lastResult = history.length = 0;
+    newFloat = false;
   });
 
   //Setup the backspace button
   let backspace_btn = document.getElementById("backspace");
   backspace_btn.addEventListener('click',function(e){
-    current_value = Number(current_value.toString().slice(0,-1));
-    Display.textContent = current_value;
+    currentValue = Number(currentValue.toString().slice(0,-1));
+    display.textContent = currentValue;
   });
 
   //Setup the float button
   let float_btn = document.getElementById("float_btn");
   float_btn.addEventListener('click',function(e){
-    current_value = parseFloat(current_value).toFixed(1);
-    new_float = true;
-    Display.textContent = current_value;
+    currentValue = parseFloat(currentValue).toFixed(1);
+    newFloat = true;
+    display.textContent = currentValue;
   });
 
   //Setup keyboard control
@@ -125,9 +127,9 @@ function setup(){
       case "9":
       case "0":
         e.preventDefault();
-        for (i = 0; i <Numb_pad.length; i++){
-          if(Numb_pad[i].value == e.key){
-            Numb_pad[i].click();
+        for (i = 0; i <numbPad.length; i++){
+          if(numbPad[i].value == e.key){
+            numbPad[i].click();
           }
         }
         break;
@@ -136,9 +138,9 @@ function setup(){
       case "/":
       case "*":
         e.preventDefault();
-        for (i = 0; i < Operators.length; i++){
-          if(Operators[i].value == e.key){
-            Operators[i].click();
+        for (i = 0; i < operators.length; i++){
+          if(operators[i].value == e.key){
+            operators[i].click();
           }
         }
         break;
@@ -154,6 +156,7 @@ function setup(){
         let Equals = document.getElementById("Equals_btn");
         Equals.click();
         break;
+
       case ".":
         e.preventDefault();
         let float_btn = document.getElementById("float_btn");
@@ -181,33 +184,32 @@ function divide (value1, value2){
     return("Nice try, but you can't divide by 0");
   } else {
     return(Number(value1) / Number(value2));
-    
   }
 }
 
 function operate(value1,value2){
-  result_backup = last_result;
+  result_backup = lastResult;
   switch(operator){
     case "+":
-      last_result = add(value1, value2);
+      lastResult = add(value1, value2);
       break;
     case "-":
-      last_result = subtract(value1, value2);
+      lastResult = subtract(value1, value2);
       break;
     case "*":
-      last_result = multiply(value1, value2);
+      lastResult = multiply(value1, value2);
       break;
     case "/":
-      last_result = divide(value1, value2);
+      lastResult = divide(value1, value2);
       break;
   }
 
-  Display.textContent = last_result;
+  display.textContent = lastResult;
   //If we got the divide by 0 response restore the previous result, else add the result to history
-  if(last_result =="Nice try, but you can't divide by 0"){
-    last_result = result_backup;
+  if(lastResult =="Nice try, but you can't divide by 0"){
+    lastResult = result_backup;
   } else{
-    history.push(last_result);
+    history.push(lastResult);
   }
 }
 setup();
